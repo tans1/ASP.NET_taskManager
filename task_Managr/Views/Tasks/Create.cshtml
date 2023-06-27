@@ -1,0 +1,35 @@
+﻿@model task_Managr.Models.Tasks
+
+@{
+    ViewData["Title"] = "Create";
+} 
+
+<div class="screen">
+    <div class="navbar-container otherscreen">
+        <nav>
+
+            <a asp-area="" asp-controller="Tasks" asp-action="Index">back</a>
+            <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            <a asp-area="" asp-controller="Tasks" asp-action="Index">Outdated</a>
+        </nav>
+    </div>
+
+
+    <div class="createTitle">
+        create task
+    </div>
+
+    <div class="createContainer">
+        <form asp-action="Create">
+            <span>Title</span>
+            <input name="title" type="text" />
+
+
+            <span>Description</span>
+            <textarea name="description" type="text" class="description"></textarea>
+            <button type="submit">Create</button>
+        </form>
+    </div>
+
+
+</div>

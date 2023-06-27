@@ -1,0 +1,28 @@
+﻿@model task_Managr.Models.Tasks
+
+@{
+    ViewData["Title"] = "SearchScreen";
+}
+
+<div class="screen">
+    <div class="navbar-container otherscreen">
+        <nav>
+
+            <a asp-area="" asp-controller="Tasks" asp-action="Index">back</a>
+            <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            <a asp-area="" asp-controller="Tasks" asp-action="Index">Outdated</a>
+        </nav>
+    </div>
+    <div class="searchContainer">
+        <form asp-action="SearchAction">
+            <input name="searchPhrase" placeholder="Search Tasks" />
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+
+
+</div>
+
+        
+

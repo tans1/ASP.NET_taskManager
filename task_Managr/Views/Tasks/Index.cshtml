@@ -1,0 +1,32 @@
+﻿@model IEnumerable<task_Managr.Models.Tasks>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="screen">
+    <div class="navbar-container otherscreen">
+        <nav>
+            <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            <a asp-area="" asp-controller="Tasks" asp-action="Create">+Create</a>
+            <a asp-area="" asp-controller="Tasks" asp-action="Index">Outdated</a>
+        </nav>
+    </div>
+
+    <div class="tasksContainer">
+        @foreach(var task in Model)
+        {
+            <div class="singleTask" >
+                    @Html.DisplayFor(modelItem => task.Title)
+                    <div class="taskControl">
+                        <a asp-action="Edit" asp-route-id="@task.Id">edit</a>
+                        <a asp-action="Details" asp-route-id="@task.Id">detail</a>
+                        <a asp-action="Delete" asp-route-id="@task.Id">delete</a>
+                    </div>
+                    
+            </div>
+        }
+    </div>
+
+</div>
+

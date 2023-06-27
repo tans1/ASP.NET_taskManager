@@ -1,0 +1,79 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div class="screen">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <div class="userIdentity--container">
+            <div class="userIdentity">
+                <img src="/Images/user.png" alt="" />
+                <span>@User.Identity?.Name</span>
+            </div>
+            <div class="logout--option">
+                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                    <button type="submit">Logout</button>
+                </form>
+            </div>
+        </div>
+
+        <div class ="navbar-container">
+            <nav>
+                <a asp-area="" asp-controller="Tasks" asp-action="Create">+ create</a>
+                <a asp-area="" asp-controller="Tasks" asp-action="SearchScreen">Search</a>
+                <a asp-area="" asp-controller="Tasks" asp-action="Index">Outdated</a>
+            </nav>
+        </div> 
+
+        <div class="categories">
+            <div class="card">
+                <a asp-area="" asp-controller="Tasks" asp-action="Index">
+                    <img src="/Images/books.jpg" alt="study image" />
+                    <span>Study</span>
+
+                </a>
+            </div>
+            <div class="card">
+                <a asp-area="" asp-controller="Tasks" asp-action="Index">
+                    <img src="/Images/hobby.jpg" alt="hobby image" />
+                    <span>hobby</span>
+
+                </a>
+            </div>
+            <div class="card">
+                <a asp-area="" asp-controller="Tasks" asp-action="Index">
+                    <img src="/Images/trip.jpg" alt="trip image" />
+                    <span>trip</span>
+
+                </a>
+            </div>
+            <div class="card">
+                <a asp-area="" asp-controller="Tasks" asp-action="Index">
+                    <img src="/Images/other.jpg" alt="other image" />
+                    <span>other category</span>
+
+                </a>
+            </div>
+            
+            
+
+        </div>
+
+    }
+    else
+    {
+        <partial name="_LoginPartial" />
+    }
+
+</div>
+
+
+
+

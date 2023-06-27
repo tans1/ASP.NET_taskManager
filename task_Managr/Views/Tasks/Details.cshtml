@@ -1,0 +1,37 @@
+﻿@model task_Managr.Models.Tasks
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<div class="screen">
+    <div class="navbar-container otherscreen">
+        <nav>
+
+            <a asp-area="" asp-controller="Tasks" asp-action="Index">back</a>
+            <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            <a asp-area="" asp-controller="Tasks" asp-action="Index">Outdated</a>
+        </nav>
+    </div>
+
+    <div class="createTitle">
+        task details
+    </div>
+
+    <div class="createContainer">
+            <span>Title</span>
+            <div class="detailsTitle">
+                @Model.Title 
+            </div>
+
+            <span>Description</span>
+            <div class="detailsdesc">
+                @Model.Description
+            </div>
+
+            <button type="submit">
+                <a asp-action="Edit" asp-route-id="@Model?.Id">edit</a>
+            </button>
+    </div>
+</div>

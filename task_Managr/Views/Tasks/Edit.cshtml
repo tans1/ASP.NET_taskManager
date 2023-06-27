@@ -1,0 +1,37 @@
+﻿@model task_Managr.Models.Tasks
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<div class="screen">
+    <div class="navbar-container otherscreen">
+        <nav>
+            <a asp-area="" asp-controller="Tasks" asp-action="Index">  Back </a>
+            <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            <a asp-area="" asp-controller="Tasks" asp-action="Index">Outdated</a>
+        </nav>
+    </div>
+
+    <div class="createTitle">
+        edit task
+    </div>
+
+    <div class="createContainer">
+        <form asp-action="Edit">
+            <input type="hidden" asp-for="Id" />
+
+            <span>Title</span>
+            <input name="title" type="text" value="@Model.Title"/>
+
+            <span>Description</span>
+            <textarea name="description" type="text" class="description" >@Model.Description</textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+</div>
+
+

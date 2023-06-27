@@ -1,0 +1,32 @@
+﻿.tasksContainer {
+    width: 100%;
+    
+}
+
+.singleTask {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px;
+    margin: 10px 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.taskControl{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%
+}
+
+.taskControl a {
+    text-decoration: none;
+    color: black;
+    padding: 3px 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1)
+}
+    .taskControl a:active {
+        transform: translateY(3px)
+    }

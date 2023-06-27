@@ -1,0 +1,101 @@
+﻿.userIdentity--container {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px
+}
+
+.userIdentity {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+    .userIdentity img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .userIdentity span {
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+.logout--option button {
+    background-color: lightblue;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+
+
+.navbar-container nav {
+    margin: 20px 0px;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar-container.otherscreen nav {
+    background-color: white;
+    margin: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 40px;
+}
+
+
+.navbar-container nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 5px
+}
+
+.navbar-container.otherscreen nav a {
+    background-color: lightblue;
+    border: none;
+    padding: 5px 15px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid black;
+    
+}
+
+    .card a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .card img {
+        height: 150px;
+        width: 100%;
+    }
+
+    .card span {
+        color: black;
+        margin: 10px 0px;
+    }

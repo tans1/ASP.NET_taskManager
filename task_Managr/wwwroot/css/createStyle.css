@@ -1,0 +1,90 @@
+﻿.createContainer,
+.deleteContainer {
+    padding: 10px
+}
+
+
+
+
+
+.createTitle {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px
+}
+
+.createContainer span,
+.deleteContainer  span{
+    display: block;
+    color: black;
+    margin: 5px 0;
+    font-weight: bold
+}
+
+
+.createContainer input,
+.createContainer textarea {
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 80%
+}
+
+
+.createContainer textarea {
+    resize: none
+}
+
+.createContainer .description {
+    width: 80%;
+    height: 200px
+}
+
+.createContainer button, .createContainer button  a{
+    text-decoration: none;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 20px;
+    background-color: lightblue;
+    color: black;
+    font-weight: bold
+}
+
+.detailsTitle, .detailsdesc {
+    background-color: white;
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 80%
+}
+
+.deleteOption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+
+}
+
+
+.deleteButton, .notdeleteButton {
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    background-color: lightblue;
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px;
+    margin-left: 20px
+}
+
